@@ -9,12 +9,22 @@ import org.junit.Test;
  */
 public class AppTest 
 {
-    /**
-     * Rigorous Test :-)
-     */
+   UserDetails userDetails;
+	
+	@Before
+	public void setup(){
+		 userDetails = new UserDetails();
+		 userDetails.setUserId(1);
+		 userDetails.setUserName("Alok");
+	}
+	
     @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    public void getUserIdTest() {
+      userDetails.getUserId();
+    }
+    
+    @Test
+    public void getUserNameTest(){
+    	userDetails.getUserName();
     }
 }
